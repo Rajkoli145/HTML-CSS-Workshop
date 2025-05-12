@@ -3,55 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show hide App</title>
+    <title>StopWatch</title>
 <style>
   body {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    font-family: Comic Sans MS;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
   }
 
-  h1 {
+  #clock {
+    font-size: 4rem;
     color: #333;
-    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  }
+
+  div {
+    margin-top: 20px;
   }
 
   button {
     padding: 10px 20px;
-    margin: 10px;
+    margin: 0 10px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #007BFF;
     color: white;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: background 0.3s ease;
   }
 
   button:hover {
     background-color: #0056b3;
   }
-
-  .button-group {
-    display: flex;
-    gap: 10px;
-  }
 </style>
 </head>
 <body>
-    <h1 id="mytext">Web Development</h1>
-    <div class="button-group">
-      <button onclick="show()">Show</button>
-      <button onclick="hide()">Hide</button>
-    </div>
-    
+    <div id="clock">00.00.00</div>
+<br>
+    <div>
+<button onclick="Start()">Start</button>
+<button onclick="Stop()">Stop</button>
+<button onclick="Reset()">Reset</button>
+    </div>  
 </body>
 <script src="script.js"> </script>
 </html>
