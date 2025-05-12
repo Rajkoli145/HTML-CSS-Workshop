@@ -6,19 +6,19 @@ This repo contains small projects made using HTML, CSS, and a little bit of Java
 
 ### 1. Counter App
 A simple counter to increase or decrease a number.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://counter-app-2b2c70.netlify.app/)
 
 ---
 
 ### 2. Country API
 Shows country data using an API.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://countryapi123.netlify.app/)
 
 ---
 
 ### 3. Digital Clock
 Displays the current time like a digital clock.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://digital-clock-c48171.netlify.app/)
 
 ---
 
@@ -30,25 +30,25 @@ Search for GitHub users and see their profile using the GitHub API.
 
 ### 5. Login Page
 A basic login form with simple validation.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://login-page-ff12a7.netlify.app/)
 
 ---
 
 ### 6. Registration Form
 A simple form to register a user.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://registration-form-876fde.netlify.app/)
 
 ---
 
 ### 7. Show/Hide App
 Click to show or hide some content.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://showhide-app-00c9c9.netlify.app/)
 
 ---
 
 ### 8. Stopwatch
 Start, stop, and reset a stopwatch timer.
-🔗 [View Live](https://your-netlify-link-here.netlify.app)
+🔗 [View Live](https://stop-watch-739ed5.netlify.app/)
 
 ---
 
