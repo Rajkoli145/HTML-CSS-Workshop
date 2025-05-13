@@ -57,7 +57,7 @@ Classic Two-player game.
 
 ### 10. Employee CRUD app
 Employee CRUD app
-🔗 [view Live] (https://employee-crud-app-89db91.netlify.app/)
+🔗 [view Live](https://employee-crud-app-89db91.netlify.app/)
 
 
 ## 💡 How to Use
