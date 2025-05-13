@@ -51,6 +51,10 @@ Start, stop, and reset a stopwatch timer.
 🔗 [View Live](https://stop-watch-739ed5.netlify.app/)
 
 ---
+### 9. Tic Tac Toe
+Classic Two-player game. 
+🔗 [View Live](https://tic-tac-toe-50112e.netlify.app/)
+
 
 ## 💡 How to Use
 
