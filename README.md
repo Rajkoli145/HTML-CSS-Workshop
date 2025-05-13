@@ -55,6 +55,10 @@ Start, stop, and reset a stopwatch timer.
 Classic Two-player game. 
 🔗 [View Live](https://tic-tac-toe-50112e.netlify.app/)
 
+### 10. Employee CRUD app
+Employee CRUD app
+🔗 [view Live] (https://employee-crud-app-89db91.netlify.app/)
+
 
 ## 💡 How to Use
 
