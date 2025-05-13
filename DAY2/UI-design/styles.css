@@ -1,0 +1,420 @@
+:root {
+    --red: #E94E3D;
+    --yellow: #B4C234;
+    --dark: #1A1D21;
+    --gray: #2C2F33;
+    --text: #ffffff;
+    --header-height: 60px;
+
+    /* Theme colors */
+    --bg-dark: #000000;
+    --bg-light: #ffffff;
+    --text-dark: #ffffff;
+    --text-light: #1A1D21;
+    --timer-bg-dark: #1a1a1a;
+    --timer-bg-light: #f0f0f0;
+}
+
+[data-theme='light'] {
+    --text: var(--text-light);
+    background-color: var(--bg-light) !important;
+}
+
+[data-theme='light'] .timer-section {
+    background: var(--timer-bg-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000000;
+    color: var(--text);
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background: var(--gray);
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.theme-toggle[data-theme='light']::before {
+    transform: translateX(24px);
+}
+
+.theme-toggle .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.theme-toggle .sun {
+    right: 6px;
+}
+
+.theme-toggle .moon {
+    left: 6px;
+}
+
+.elapsed-time, .time-elapsed {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.back-btn {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.match-title {
+    font-size: 20px;
+}
+
+.show-actions {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    flex: 1;
+    height: calc(100vh - var(--header-height));
+}
+
+.timers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    padding: 30px;
+    flex: 1;
+}
+
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.timer-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.timer-display {
+    font-size: 240px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.9;
+    margin: 10px 0;
+    letter-spacing: -8px;
+    transition: color 0.3s ease;
+}
+
+.timer-section:first-child .timer-display {
+    color: var(--red);
+}
+
+.timer-section:last-child .timer-display {
+    color: var(--yellow);
+}
+
+.timer-section:first-child.active {
+    background-color: var(--red);
+}
+
+.timer-section:last-child.active {
+    background-color: var(--yellow);
+}
+
+.timer-section.active .timer-display {
+    color: #000000;
+}
+
+.timer-section.active .team-name,
+.timer-section.active .timeout-section,
+.timer-section.active .timeout-count {
+    color: #000000;
+}
+
+.team-section {
+    background-color: var(--gray);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.timer {
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.team-eight .timer {
+    color: var(--red);
+}
+
+.team-mcdonald .timer {
+    color: var(--yellow);
+}
+
+.timer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 30px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.start-btn, .edit-btn {
+    padding: 20px 50px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    min-width: 180px;
+    font-size: 19px;
+    background: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer-section:first-child .start-btn {
+    background-color: var(--red);
+    color: white;
+}
+
+.timer-section:last-child .start-btn {
+    background-color: var(--yellow);
+    color: var(--dark);
+}
+
+.edit-btn {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text);
+}
+
+.side-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #1a1a1a;
+    width: 220px;
+}
+
+.control-btn {
+    background: #1a1a1a;
+    border: none;
+    color: var(--text);
+    padding: 25px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.control-btn:hover {
+    background: #222222;
+}
+
+.control-btn span {
+    font-size: 14px;
+    opacity: 0.5;
+    color: #888;
+}
+
+.stop-all {
+    background-color: var(--gray);
+}
+
+.timeout-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 19px;
+}
+
+.timeout-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.timeout-controls button {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeout-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.timer-display.active {
+    animation: pulse 1s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timer-section {
+    animation: slideIn 0.5s ease-out;
+}
+
+.timeout-controls button {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.timeout-controls button:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.timer.active {
+    animation: pulse 1s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-section {
+    animation: slideIn 0.5s ease-out;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <a href="#" class="back-btn">← Back to competition</a>
+                <div class="match-title">Qualifying Draws Match M18 - Eight vs. Team McDonald - End 1</div>
+            </div>
+            <div class="header-right">
+                <span class="elapsed-time">03:46 elapsed</span>
+                <button class="theme-toggle" data-theme="dark">
+                    <span class="icon moon">🌙</span>
+                    <span class="icon sun">☀️</span>
+                </button>
+                <button class="show-actions">Show actions</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="side-controls">
+                <button class="control-btn stop-all">STOP ALL</button>
+                <button class="control-btn practice">PRACTICE<span>15:00</span></button>
+                <button class="control-btn midgame">MIDGAME BREAK<span>02:30</span></button>
+                <button class="control-btn between">BETWEEN END<span>00:30</span></button>
+                <button class="control-btn extra">EXTRA END</button>
+            </div>
+
+            <div class="timers-container">
+                <div class="timer-section">
+                    <div class="timer-header">
+                        <span class="team-name">Eight</span>
+                    </div>
+                    <div class="timer-display" id="timerEight">29:14</div>
+                    <div class="timer-bottom">
+                        <div class="timer-controls">
+                            <button class="start-btn">START</button>
+                            <button class="edit-btn">EDIT</button>
+                        </div>
+                        <div class="timeout-section">
+                            <span>Timeouts</span>
+                            <div class="timeout-controls">
+                                <button class="minus">−</button>
+                                <span class="timeout-count">2 left</span>
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer-section">
+                    <div class="timer-header">
+                        <span class="team-name">Team McDonald</span>
+                        <span class="time-elapsed">00:05 elapsed</span>
+                    </div>
+                    <div class="timer-display" id="timerMcDonald">32:55</div>
+                    <div class="timer-bottom">
+                        <div class="timer-controls">
+                            <button class="start-btn">START</button>
+                            <button class="edit-btn">EDIT</button>
+                        </div>
+                        <div class="timeout-section">
+                            <span>Timeouts</span>
+                            <div class="timeout-controls">
+                                <button class="minus">−</button>
+                                <span class="timeout-count">2 left</span>
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
