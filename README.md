@@ -60,6 +60,12 @@ Classic Two-player game.
 Employee CRUD app
 🔗 [view Live](https://employee-crud-app-89db91.netlify.app/)
 
+---
+### 11. EmailSender
+🔗 [view Live](https://email-sender1.netlify.app/)
+
+
+
 
 ## 💡 How to Use
 
