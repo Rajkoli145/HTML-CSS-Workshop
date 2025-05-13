@@ -3,22 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
     <style>
-        body {
+body {
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .main-container {
     display: flex;
-    flex-direction: row;
-    gap: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 100px 50px;
+    flex-wrap: wrap;
 }
 
 .sub-container {
-    margin-top: 200px;
-    margin-left: 150px;
     color: white;
+}
+
+.form-container {
+    background-color: #ffffff10;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 350px;
+}
+
+.form-container .title {
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form input.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form input.input:focus {
+    outline: 2px solid #4FC3F7;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4FC3F7;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-btn:hover {
+    background-color: #039BE5;
+}
+
+.page-link,
+.sign-up-label {
+    text-align: center;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.sign-up-link {
+    color: #4FC3F7;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.apple-login-button,
+.google-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.apple-login-button {
+    background-color: #000;
+    color: white;
+}
+
+.apple-login-button:hover {
+    background-color: #222;
+}
+
+.google-login-button {
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #ddd;
+}
+
+.google-login-button:hover {
+    background-color: #f5f5f5;
+}
+
+.apple-icon,
+.google-icon {
+    font-size: 18px;
 }
     </style>
     <link rel="stylesheet" href="style.css">
