@@ -62,6 +62,7 @@ Employee CRUD app
 
 ---
 ### 11. EmailSender
+Email Sender
 🔗 [view Live](https://email-sender1.netlify.app/)
 
 
