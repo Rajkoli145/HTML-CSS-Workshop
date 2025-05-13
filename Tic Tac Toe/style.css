@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Game Container */
+main {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Game Grid */
+main > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.box {
+    aspect-ratio: 1;
+    background-color: #f0f4f8;
+    border: none;
+    border-radius: 8px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3a4a6b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    background-color: #e0e8f0;
+    transform: translateY(-2px);
+}
+
+.box:disabled {
+    color: #3a4a6b;
+    cursor: not-allowed;
+    background-color: #e0e8f0;
+    transform: none;
+}
+
+/* Message Container */
+.msg-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.msg-container.hide {
+    display: none;
+}
+
+.msg {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #3a4a6b;
+}
+
+/* Buttons */
+button {
+    background-color: #4a6bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 0.5rem;
+}
+
+button:hover {
+    background-color: #3a5bef;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#restart-game {
+    background-color: #f0f4f8;
+    color: #4a6bff;
+}
+
+#restart-game:hover {
+    background-color: #e0e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    main, .msg-container {
+        padding: 1.5rem;
+    }
+    
+    .box {
+        font-size: 2.5rem;
+    }
+    
+    .msg {
+        font-size: 1.3rem;
+    }
+}
