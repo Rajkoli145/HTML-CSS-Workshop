@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forms</title>
+
+</head>
+
+<body>
+
+<div id="container">
+
+<h1>Application Form</h1>
+
+
+
+
+<form >
+
+  <label for="fname">First Name:</label>
+  <input type="text" name="fname" id="fname">
+
+
+
+  <label for="lname">Last Name:</label>
+  <input type="text" name="lname" id="lname">
+
+  <br><br>
+
+  <label for="dob">Date of birth:</label>
+  <input type="date" name="dob" id="dob">
+
+
+
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age">
+
+  <br><br>
+
+  <label for="gender">Gender:</label>
+  <select name="gender" id="gender">
+    <option value="male" selected>Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+
+
+  <label for="email">Email Address:</label>
+  <input type="email" name="email" id="email" placeholder="Enter email address">
+
+  <br><br>
+
+  <label for="positions">Positions Available:</label>
+  <input type="radio" name="positions" id="junior" value="Junior Developer">
+  <label for="junior">Junior Developer</label>
+
+  <input type="radio" name="positions" id="mid" value="Mid-level Developer">
+  <label for="mid">Mid-level Developer</label>
+
+  <input type="radio" name="positions" id="senior" value="Senior Developer">
+  <label for="senior">Senior Developer</label>
+
+  <br><br>
+
+  <label for="Languages">Programming Languages:</label>
+  <input type="checkbox" name="languages" id="java" value="Java">
+  <label for="java">Java</label>
+
+  <input type="checkbox" name="languages" id="js" value="JavaScript">
+  <label for="js">JavaScript</label>
+
+  <input type="checkbox" name="languages" id="python" value="Python">
+  <label for="python">Python</label>
+
+  <br><br>
+
+  <label for="pword">Password:</label>
+  <input type="password" name="pword" id="pword">
+
+
+
+  <label for="cpword">Confirm Password:</label>
+  <input type="password" name="cpword" id="cpword">
+
+  <br><br>
+
+  <button class="btn" type="submit">Submit</button>
+  <button class="btn" type="reset">Reset</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
